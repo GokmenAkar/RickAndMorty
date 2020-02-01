@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jyD-Tb-NU6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info Page View Controller-->
+        <scene sceneID="m0N-9Z-3Ur">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jyD-Tb-NU6" customClass="RMInfoPageViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUA-uk-A04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-246" y="228"/>
+        </scene>
+        <!--Gokmen-->
+        <scene sceneID="MPZ-R2-pE4">
+            <objects>
+                <viewController storyboardIdentifier="rickAndMortyViewController" id="PSz-iM-ZFV" customClass="RickAndMortyViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U7N-mT-Xcb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9CR-Ds-GBg">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PSz-iM-ZFV" id="htm-Vg-d3i"/>
+                                    <outlet property="delegate" destination="PSz-iM-ZFV" id="CxB-fu-Mxj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9CR-Ds-GBg" firstAttribute="top" secondItem="U7N-mT-Xcb" secondAttribute="topMargin" id="CVE-Ju-Zwh"/>
+                            <constraint firstItem="9CR-Ds-GBg" firstAttribute="leading" secondItem="U7N-mT-Xcb" secondAttribute="leadingMargin" id="PMb-fD-FCQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9CR-Ds-GBg" secondAttribute="trailing" id="c76-YS-jGM"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="9CR-Ds-GBg" secondAttribute="bottom" id="mzK-dP-7NB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gokmen" id="Ej6-9s-NxH"/>
+                    <connections>
+                        <outlet property="RMWorldTableView" destination="9CR-Ds-GBg" id="00g-MR-aEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sr8-ko-oSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="228"/>
+        </scene>
+    </scenes>
+</document>
