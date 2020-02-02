@@ -31,19 +31,16 @@ class NetworkClintAPI {
         let completeURL = apiRequest.baseURL  +
                           apiRequest.apiPath  +
                           apiRequest.endPoint
-        print(completeURL)
         
         var urlComponents = URLComponents(string: completeURL)!
-        
         urlComponents.queryItems = apiRequest.queryItems
 
         var urlRequest = URLRequest(url: urlComponents.url!)
-        
-        print(urlComponents.url)
-
         urlRequest.httpMethod = apiRequest.requestType.rawValue
         urlRequest.setValue(apiRequest.contentType, forHTTPHeaderField: "Content-Type")
         
+        print(urlComponents.url ?? "")
+
         return urlRequest
     }
     

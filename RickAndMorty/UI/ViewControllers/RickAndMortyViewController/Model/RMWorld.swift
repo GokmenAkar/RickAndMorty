@@ -18,7 +18,7 @@ import Foundation
 // MARK: - Welcome
 struct RMWorld: Codable {
     let info: Info?
-    let results: [RMWorldResult]
+    var results: [RMWorldResult]
 }
 
 // MARK: - Result

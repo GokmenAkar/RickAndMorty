@@ -10,7 +10,7 @@ import Foundation
 
 struct RMEpisode: Codable {
     let info: Info?
-    let results: [RMEpisdoseResult]
+    var results: [RMEpisdoseResult]
 }
 
 // MARK: - Result

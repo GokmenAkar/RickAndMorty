@@ -3,6 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,6 +40,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="9CR-Ds-GBg" secondAttribute="trailing" id="c76-YS-jGM"/>
                             <constraint firstAttribute="bottomMargin" secondItem="9CR-Ds-GBg" secondAttribute="bottom" id="mzK-dP-7NB"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="q3c-mU-Dzv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Gokmen" id="Ej6-9s-NxH"/>
                     <connections>
@@ -47,6 +50,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sr8-ko-oSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="554" y="228"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="uVs-73-s46">
+            <objects>
+                <viewController storyboardIdentifier="rMDetailViewController" id="F7r-xs-rPm" customClass="RMDetailViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2tg-sE-JkG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="03M-ga-N9a">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="4" minimumInteritemSpacing="4" id="efJ-l7-Yvm">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lqX-AE-cXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Luy-Xs-3wP">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="F7r-xs-rPm" id="eeg-UG-axW"/>
+                                    <outlet property="delegate" destination="F7r-xs-rPm" id="Ms0-0Y-vkm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="03M-ga-N9a" secondAttribute="bottom" id="2av-eE-1Kg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="03M-ga-N9a" secondAttribute="trailing" id="390-ru-4e5"/>
+                            <constraint firstItem="03M-ga-N9a" firstAttribute="top" secondItem="2tg-sE-JkG" secondAttribute="topMargin" id="RR4-bP-9YJ"/>
+                            <constraint firstItem="03M-ga-N9a" firstAttribute="leading" secondItem="2tg-sE-JkG" secondAttribute="leadingMargin" id="c8i-FQ-IZA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailCollectionView" destination="03M-ga-N9a" id="WU8-PD-5PZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gv-wx-toT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311.5942028985507" y="227.67857142857142"/>
         </scene>
     </scenes>
 </document>
